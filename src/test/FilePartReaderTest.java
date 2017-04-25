@@ -1,3 +1,6 @@
+package test;
+
+import main.FilePartReader;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -20,7 +23,7 @@ public class FilePartReaderTest {
     /*@Test
     public void testNoSuchFileException() throws IOException {
         assertThrows(java.nio.file.NoSuchFileException.class, () -> {
-            new FilePartReader("src/tttt.txt", 1, 1);
+            new main.FilePartReader("src/tttt.txt", 1, 1);
         });
     }*/
 
@@ -33,8 +36,8 @@ public class FilePartReaderTest {
 
    /* @Test
     public void testRead() throws IOException {
-        FilePartReader fPR = new FilePartReader("src/test.txt", 1, 1);
-        Method method = FilePartReader.class.getDeclaredMethod(read());
+        main.FilePartReader fPR = new main.FilePartReader("src/test.txt", 1, 1);
+        Method method = main.FilePartReader.class.getDeclaredMethod(read());
         method.setAccessible(true);
 
         String result = fPR.read();

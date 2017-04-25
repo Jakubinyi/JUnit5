@@ -1,10 +1,13 @@
+package test;
+
+import main.FilePartReader;
+import main.FileWorldAnalyzer;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Created by jakubinyi on 2017.04.22..
@@ -18,7 +21,7 @@ public class FileWorldAnalyzerTest {
 
         ArrayList<String> result = new ArrayList<>(Arrays.asList("bence", "cica", "Dani"));
 
-        assertEquals(fWA.wordsByABC(), result);
+        Assertions.assertEquals(fWA.wordsByABC(), result);
     }
 
 
@@ -28,7 +31,7 @@ public class FileWorldAnalyzerTest {
 
         ArrayList<String> result = new ArrayList<>(Arrays.asList("Dani"));
 
-        assertEquals(fWA.wordsContainingSubString("da"), result);
+        Assertions.assertEquals(fWA.wordsContainingSubString("da"), result);
     }
 
 }
